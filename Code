@@ -1,0 +1,46 @@
+def Add (x,y):
+  return x+y
+
+def Subtract (x,y):
+  return x-y
+
+def Multiply (x,y):
+  return x*y
+
+def Divide (x,y):
+  return x/y
+
+print ("Vanako!")
+print ("Select operation")
+print ("1.Add")
+print ("2.Subtract")
+print ("3.Multiply")
+print ("4.Divide")
+
+
+while True:
+  choice = input("Entre Choice (1/2/3/4):\n")
+  if choice in ('1','2','3','4'):
+    try:
+      Number_1 = int(input("Enter first number \n"))
+      Number_2 = int(input("Enter seccond number \n"))
+    except ValueError:
+      print("Invalid input, Please enter a number \n")
+      continue
+    if choice == '1':
+      print (Number_1, "+", Number_2, "=", Add(Number_1,Number_2))
+      
+    elif choice == '2':
+      print (Number_1, "-", Number_2, "=", Subtract(Number_1,Number_2))
+      
+    elif choice == '3':
+      print (Number_1, "*", Number_2, "=", Multiply(Number_1,Number_2))
+
+    elif choice == '4':
+      print (Number_1, "/", Number_2, "=", Divide(Number_1,Number_2))
+
+    Next_calculation = input("Want to do another calculation? (Y/N):\n")
+    if Next_calculation == "N":
+      break
+  else:
+    print ("Invalid Input")
